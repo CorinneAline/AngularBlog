@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Post} from './../post';
 
 @Component({
     selector: 'app-post-list-item',
     templateUrl: './post-list-item.component.html',
     styleUrls: ['./post-list-item.component.scss']
 })
-export class PostListItemComponent implements OnInit {
+export class PostListItemComponent implements Post {
 
     @Input() postTitle: string;
     @Input() postContent: string;
@@ -13,11 +14,6 @@ export class PostListItemComponent implements OnInit {
     @Input() createdAt: Date;
 
     constructor() {
-        this.loveIts = 0;
-        this.createdAt = new Date();
-    }
-
-    ngOnInit() {
     }
 
     onLoveIt() {

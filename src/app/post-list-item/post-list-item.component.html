@@ -8,7 +8,7 @@
     <p class="lead">{{ postContent }}</p>
     <button class="btn btn-success" (click)="onLoveIt()">
         Love it !  <span *ngIf="loveIts > 0" class="badge">{{ loveIts }}</span>
-    </button>
+    </button>&nbsp;
     <button class="btn btn-danger" (click)="onDontLoveIt()">
         Don't Love it !  <span *ngIf="loveIts < 0" class="badge">{{ loveIts }}</span>
     </button>

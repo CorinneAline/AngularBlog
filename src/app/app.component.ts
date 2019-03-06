@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Post} from './post';
 
 @Component({
   selector: 'app-root',
@@ -6,37 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'my-blog';
-  posts = [
-      {
-          title: 'My post number One',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          loveIt: 0,
-          createdAt: ''
-      },
-      {
-          title: 'My post number Two',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          loveIt: 0,
-          createdAt: ''
-      },
-      {
-          title: 'My post number Three',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          loveIt: 0,
-          createdAt: ''
-      },
-      {
-          title: 'My post number Four',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          loveIt: 0,
-          createdAt: ''
-      },
-      {
-          title: 'My post number Five',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          loveIt: 0,
-          createdAt: ''
-      },
-  ];
+    title = 'my-blog';
+    posts = [
+        new Post(
+            'My Post Number One',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        ),
+        new Post(
+            'My Post Number Two',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        ),
+        new Post(
+            'My Post Number Three',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        ),
+        new Post(
+            'My Post Number Four',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        ),
+        new Post(
+            'My Post Number Five',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        )
+    ];
 }
